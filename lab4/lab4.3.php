@@ -7,13 +7,35 @@
     <title>Array</title>
 </head>
 <body>
+    <h1>Numeros</h1>
     <?php
-        for($i=0; $i<=20; $i++){?>
-            <form action="" method="post">
-                Ingrese un numero  <input type="text" name="numero"><br>
+        for($i=0; $i<=4; $i++){?>
+            <form action="lab4.3.php" method="post">
+                Ingrese un numero  <input type="text" name="numero[]"><br>
         <?php }
     ?>
-        <input type="submit" name="ingresar" value="ingresar" />
+        <input type="submit" name="ingresar" value="Ingresar" />
     </form>
 </body>
 </html>
+
+
+<?php
+    if (isset($_POST['ingresar'])){
+        $num = $_POST['numero'];
+        $n = count($num);
+        for($i = 0; $i < $n; $i++){
+            if ($i == 0) {
+                $mayor = $num[0];
+            }else{
+                if ($num[$i] > $mayor){
+                    $mayor = $num[$i];
+    
+                }
+            }
+        }
+        echo "<br>El numero mayor es :";
+
+        echo $mayor;
+    }
+?>
