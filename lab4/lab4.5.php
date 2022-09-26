@@ -17,6 +17,7 @@
 
         if ($nu % 2 == 0){
           for($i=0; $i<$nu; $i++){
+            $c=$i;
             for($j=0; $j<$nu; $j++){
               $matriz[$i][$c]=1;
             }
