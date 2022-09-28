@@ -1,8 +1,7 @@
 <?php
   
       $matriz = array();
-      $sumaColun=0;
-      $sumaFila=0;
+
 
 
       if(isset($_POST['enviar'])){
