@@ -5,5 +5,4 @@
     $num =$_POST['num'];
     $fact->asignar($num);
     echo "Factorial ".$fact->getFactorial();
-
 ?>

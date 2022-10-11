@@ -36,7 +36,7 @@
       
         }else
         {
-          echo 'Debe ingresar un numero Impar <form action="index.php">
+          echo 'Debe ingresar un numero Impar <form action="lab4.5.html">
           <input type="submit"  name="regresar" value="Regresar"> 
           </form>';
         } 
