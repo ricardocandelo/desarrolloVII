@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/estilo.css" type="text/css">
 </head>
 <body>
+    <h1>Manejo de sessiones</h1>
+    <h2>Paso 3: La variable ya ha sido destruida su valor se ha perdido</h2>
     <?php
         if(isset($_SESSION['var'])){
             $var = $_SESSION['var'];

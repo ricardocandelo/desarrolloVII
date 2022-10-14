@@ -19,7 +19,7 @@
             $var = $_SESSION['var'];
             print("<p>Valor de sesion: $var<p>\n");
             print($_SESSION['var']);
-            print ("<A HREF='lab103.php'>Paso 3 </A");
+            print ("<A HREF='lab123.php'>Paso 3 </A");
         }
         else{
             print ("Session no iniciada, ir al <A href='lab121.php'>Paso 1</A>");
