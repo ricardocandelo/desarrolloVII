@@ -1,5 +1,5 @@
 <?php
-    require_once dirname('modelo.php');
+    require_once('modelo.php');
 
     class votos extends modeloCredencialesDB{
 
@@ -10,19 +10,19 @@
         public function listar_votos() {
             $instruccion = "CALL sp_listar_votos";
 
-            $consulta=$this->db->query($instruccion);
+            $consulta=$this->_db->query($instruccion);
             $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
 
             if ($resultado) {
                 return $resultado;
                 $resultado->close();
-                $this->db->close();
+                $this->_db->close();
             }
         }
 
         public function actualizar_votos($vosto1, $votos2){
             $instruccion = "CALL sp_actualizar_votos('".$vosto1."','" .$votos2."')";
-            $actualiza=$this->db->query($instruccion);
+            $actualiza=$this->_db->query($instruccion);
 
             if ($actualiza){
                 return $actualiza;

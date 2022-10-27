@@ -26,7 +26,7 @@
         public function consultar_noticias_filtro($campo, $valor){ 
             $instruccion = "CALL sp_listar_noticias_filtro('".$campo."','".$valor."')";
             $consulta=$this->_db->query($instruccion);
-            $resultado=$consulta->fetch_all(MYSQLI_ASSOC);
+            $resultado=$consulta->fetch_field();
             if($resultado){
                 return $resultado;
                 $resultado->close();
